@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+/* Card */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 550px; /* Largura fixa para todos os cards */
+    min-height: 100px; /* Altura inicial */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    overflow: hidden;
+}
+
+/* Layout dos Cards */
+.component-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .component-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .component-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5e6f7;
+    color: #4b4b4b;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4b4b4b;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Expansão do card ao ser aberto */
+.card.open {
+    min-height: 400px; /* Altura expandida quando o card é aberto */
+}

@@ -1,0 +1,16 @@
+<div class="card" (click)="toggleCard('tarefa2')">
+  <h2>Tarefa 2 - Verificação de Fibonacci</h2>
+  <div class="card-content" *ngIf="isCardActive('tarefa2')">
+    <p><strong>Código:</strong></p>
+    <p>
+      Dado um número, o código verifica se ele pertence à sequência de Fibonacci.
+      <br>
+      - Começa com 0 e 1.
+      <br>
+      - Cada próximo número é a soma dos dois anteriores.
+    </p>
+    <p><strong>Resultado:</strong> O número {{ numero }} 
+       {{ pertenceFibonacci ? 'PERTENCE' : 'NÃO PERTENCE' }} à sequência de Fibonacci.
+    </p>
+  </div>
+</div>

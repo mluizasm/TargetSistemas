@@ -1,0 +1,46 @@
+/* Estilo do link LinkedIn */
+.linkedin-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  background-color: #8a79d2; /* tom lilás */
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.3s;
+  margin-bottom: 30px; /* Distância maior entre o link e a div abaixo */
+}
+
+.linkedin-link:hover {
+  background-color: #6a5acd; /* tom lilás mais escuro */
+}
+
+.linkedin-link .hover-message {
+  visibility: hidden;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.linkedin-link:hover .hover-message {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Centraliza a div do LinkedIn */
+.linkedin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0; /* Distância superior e inferior */
+}

@@ -1,0 +1,20 @@
+<div class="card" (click)="toggleCard('tarefa4')">
+    <h2>Tarefa 4 - Percentual de Faturamento por Estado</h2>
+    <div class="card-content" *ngIf="isCardActive('tarefa4')">
+      <table>
+        <thead>
+          <tr>
+            <th>Estado</th>
+            <th>Percentual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let estado of objectKeys()">
+            <td>{{ estado }}</td>
+            <td>{{ getPercentual(estado) | number:'1.2-2' }}%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

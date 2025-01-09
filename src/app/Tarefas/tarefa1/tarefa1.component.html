@@ -1,0 +1,14 @@
+<div class="card" (click)="toggleCard()">
+  <h2>Tarefa 1 - Resultado da Soma</h2>
+  <div class="card-content" *ngIf="activeCard">
+    <p><strong>Código:</strong></p>
+    <pre>
+      int INDICE = 13, SOMA = 0, K = 0;
+      Enquanto K - INDICE faça:
+        K = K + 1;
+        SOMA = SOMA + K;
+      Imprimir(SOMA);
+    </pre>
+    <p><strong>Resultado da soma:</strong> O valor da variável SOMA é: {{ soma }}</p>
+  </div>
+</div>

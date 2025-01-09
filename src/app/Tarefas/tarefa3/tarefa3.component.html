@@ -1,0 +1,10 @@
+<div class="card" (click)="toggleCard('tarefa3')">
+    <h2>Tarefa 3 - Faturamento</h2>
+    <div class="card-content" *ngIf="isCardActive('tarefa3')">
+      <p><strong>Menor Faturamento:</strong> {{ menorFaturamento | number:'1.2-2' }}</p>
+      <p><strong>Maior Faturamento:</strong> {{ maiorFaturamento | number:'1.2-2' }}</p>
+      <p><strong>Média de Faturamento:</strong> {{ mediaFaturamento | number:'1.2-2' }}</p>
+      <p><strong>Dias Acima da Média:</strong> {{ diasAcimaDaMedia }}</p>
+    </div>
+  </div>
+  

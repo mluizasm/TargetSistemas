@@ -1,0 +1,16 @@
+<div class="card" (click)="toggleCard('tarefa5')">
+  <h2>Tarefa 5 - Inversão de String</h2>
+  <div class="card-content" *ngIf="isCardActive('tarefa5')">
+    <label for="inputTexto">Digite uma string: </label>
+    <input 
+      id="inputTexto" 
+      type="text" 
+      [(ngModel)]="textoOriginal" 
+      (ngModelChange)="onInputChange()" 
+      placeholder="Digite seu texto aqui"
+      (click)="$event.stopPropagation()"
+    />
+    <p><strong>Texto original:</strong> {{ textoOriginal }}</p>
+    <p><strong>Texto invertido:</strong> {{ textoInvertido }}</p>
+  </div>
+</div>
